@@ -1,0 +1,171 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: rgb(241, 241, 241);
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 45%;
+    padding-top: 8px;
+    height: 100%;
+}
+
+li {
+    display: inline-flex;
+    height: 100%;
+    text-transform: uppercase;
+    margin: 8px 0;
+}
+
+.active {
+    text-decoration: none;
+    color: gray;
+}
+
+.active:hover {
+    border-bottom: 2px solid rgb(82, 82, 82);
+}
+
+img {
+    width: 200px;
+}
+
+svg {
+    width: 40px;
+    color: gray;
+    margin-right: 15px;
+    margin-top: 6px;
+}
+
+
+@media (max-width: 920px) {
+    ul {
+        flex-direction: column;
+        margin-left: 10px;
+    }
+    .profile1, .profile3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-content p {
+        overflow-y: scroll;
+    }
+}
+
+
+/* Main */
+
+.img-background {
+    background-image: url(/img/utn-alumnos.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.main-image {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 300px;
+    min-width: 580px;
+}
+
+@media (max-width: 1078px) {
+    .img-background h1 {
+        margin-left: 10px;
+    }
+}
+
+.img-content {
+    display: flex;
+    max-height: 300px;
+    align-items: center;
+    padding: 0 83px;
+}
+
+.img-content p {
+    max-height: 300px;
+    line-height: 1.3rem;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-button {
+    width: 8px;
+    height:5px;
+}
+::-webkit-scrollbar-track {
+    background:#eee;
+    border: thin solid lightgray;
+    box-shadow: 0px 0px 3px #dfdfdf inset;
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb {
+    background:#999;
+    border: thin solid gray;
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background:#7d7d7d;
+}
+
+
+
+/* subrayado animado
+
+a {
+    position: relative;
+    padding: 10px 20px;
+  }
+  a::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 0;
+    background: blue;
+    transition: height 0.3s;
+  }
+  a:hover::after {
+    height: 5px;
+    transition: height 0.3s;
+  }
+  
+  a + a::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 5px;
+    background: blue;
+    transition: width 0.3s;
+  }
+  
+  a + a:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+  }
+*/

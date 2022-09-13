@@ -11,11 +11,15 @@ padding: 0;
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(/img/bg-img.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 
 nav {
     width: 100%;
-    background-color: #007700;
+    background-color: rgba(224, 255, 255, 0.5);
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 10px;
@@ -27,9 +31,14 @@ nav {
 }
 
 .logo {
-    color: #fff;
+    color: rgb(255, 0, 0);
     font-weight: 700;
     display: inline-block;
+}
+
+.logo img {
+    width: 5%;
+    margin-left: 1.5rem;
 }
 
 .logo:hover {
@@ -39,24 +48,95 @@ nav {
 .nav-links {
     list-style: none;
     display: flex;
-
+    
 }
+
+nav a {
+    text-decoration: none;
+}
+
+.cont-nav img {
+    width: 8%;
+}
+
 
 .nav-item a {
     display: inline-block;
     padding: 10px 15px;
     text-decoration: none;
-    color: #fff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
 }
 
 .nav-item:hover {
-    background-color: #005c00;
+    background-color: rgba(224, 255, 255, 0.2);
+    border-radius: 10%;
+    font-weight: 900;
 }
 
 .nav-item:hover a {
     color: yellow;
+    transition: .2s;
 }
 
 .nav-item-login {
     font-weight: bold;
 }
+
+/* LOGIN */
+
+.login {
+
+    width: 100px;
+    padding-left: 1rem;
+
+}
+.btn {
+    color: #fff;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    font-weight: bold;
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: .875rem;
+    border-radius: 16px;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+}
+.btn, button {
+    color: #fff;
+    padding: 8px 30px;
+    font-weight: 700;
+    border-radius: 12px;
+}
+.btn-success-fancy {
+    cursor: pointer;
+    background-color: #96c157;
+    border: 2px solid;
+    border-color: #96c157!important;
+    color: #fff;
+    background-image: url(button-overlay2.png),linear-gradient(#a0d54e,#6eb742 80%)!important;
+    background-position: center center,center center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 7px #6eb742;
+    text-shadow: 0 0 12px #2c6e05;
+}
+
+.btn:hover {
+    color: black;
+}
+
+/* FIN LOGIN */
