@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="auth-form card bg-white p-0 formshadow">
+        <div class="card-body formbackground">
+            <h4 class="card-title mt-0 mb-2 text-center">Sign in</h4>
+            <form action="login.php" method="POST">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <label class="form-label">
+                            Username <span class="text-danger">*</span>
+                        </label>
+                        <input name="username" type="text" class="form-control" value="" placeholder="Enter username">
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label">
+                            Password <span class="text-danger">*</span>
+                        </label>
+                        <input name="password" type="password" id="password" class="form-control mb-1" value="" maxlength="100" required="" placeholder="Enter password">
+                        <div onclick="eyeShow();" style="cursor: pointer; float: right;">
+                            <i class="ri-eye-fill text-gray rifix" id="pwebtn"></i>
+                            <span id="pwtext">Show</span>
+                            password
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-check">
+                            <input name="remember" type="checkbox" class="form-check-input " value="1" checked="">
+                            <label class="form-check-label">Remember
+me</label>
+                        </div>
+                    </div>
+                    <div class="col-6 text-end">
+                        <a href="forgot.php" class="activemenulink">Forgot Password?</a>
+                    </div>
+                </div>
+                <input type="hidden" value="2" name="captchatype" id="captchatype">
+                <center>
+                    <ul class="nav nav-tabs mb-2 mt-4" style="max-width: 260px; border: 1px solid #fff; border-radius: 20px;">
+                        <li class="nav-item itemsuper">
+                            <a class="nav-link itema" style="border-top-right-radius: 0px; border-bottom-right-radius: 0px;" href="javascript:dTab(0);" id="tabnav-0">hCaptcha</a>
+                        </li>
+                        <li class="nav-item itemsuper">
+                            <a class="nav-link itema activea" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;" href="javascript:dTab(1);" id="tabnav-1">reCAPTCHA</a>
+                        </li>
+                    </ul>
+                </center>
+                <div class="alltabs" id="tab-0" style="display: none;">
+                    <center>
+                        <div class="h-captcha" data-sitekey="391d405b-6e0c-42bf-b836-a9e7bd9de00b" data-callback="enableBtn1" data-theme="light"></div>
+                    </center>
+                </div>
+                <div class="alltabs" id="tab-1" style="display: block;">
+                    <center>
+                        <div class="g-recaptcha" data-sitekey="6LcSKGYeAAAAADEwoqjN3tfdxNyWTanBaI6tZNJB" data-callback="enableBtn2" data-theme="light" data-size="normal"></div>
+                    </center>
+                </div>
+                <div class="mt-4 d-grid gap-2">
+                    <button type="submit" class="btn btn-lg btn-success-fancy" id="enablebtn" disabled="disabled">Sign in</button>
+                </div>
+            </form>
+            <p class="mt-4 mb-0">
+                Don't have an account? <a class="activemenulink" href="register.php">Sign
+up</a>
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
